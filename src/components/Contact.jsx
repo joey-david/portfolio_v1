@@ -112,7 +112,7 @@ const Contact = () => {
                 <FaEnvelope />
               </div>
               <h3>Email</h3>
-              <p><a href="mailto:contact@joeydavid.com">contact@joeydavid.com</a></p>
+              <p><a href="mailto:joeydavid99@gmail.com">joeydavid99@gmail.com</a></p>
             </motion.div>
             
             <motion.div 
