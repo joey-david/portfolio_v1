@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center; /* Add this line */
     background-color: var(--background);
     position: relative;
     overflow: hidden;
@@ -36,11 +37,28 @@
   .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
   
   .intro {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-secondary);
   }
   
   .greeting {
@@ -66,13 +84,6 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--text-secondary);
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
     color: var(--text-secondary);
   }
   

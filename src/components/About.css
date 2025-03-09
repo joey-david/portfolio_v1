@@ -1,12 +1,22 @@
 .about-section {
     padding: 100px 0;
     background-color: var(--bg-secondary);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
+  .about-container {
+    width: 100%;
+  }
+
   .about-content {
     display: flex;
     gap: 60px;
     align-items: center;
+    max-width: 1200px;
+    width: 100%; /* Add this to take full available width */
   }
   
   .about-text {
@@ -65,12 +75,12 @@
   
   .image-container {
     position: relative;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 0;
   }
   
   .image-container::before {

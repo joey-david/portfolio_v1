@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="nav">
           <Link to="/#" className="logo">
-            Joey<span>David</span>
+            Joey <span>David</span>
           </Link>
           
           <div className="menu-toggle" onClick={toggleMenu}>
