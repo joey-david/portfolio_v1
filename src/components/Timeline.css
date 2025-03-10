@@ -42,7 +42,6 @@
 
 .timeline-dot-active {
   background-color: var(--text-ternary);
-  border-color: var(--primary);
   box-shadow: 0 0 12px var(--text-ternary);
   transform: scale(1.2);
 }
@@ -191,30 +190,32 @@
   }
 }
 
-/* Timeline line */
-.timeline-line {
-  position: absolute;
-  left: 2rem; /* md:left-8 left-8 */
-  top: 0;
-  overflow: hidden;
-  width: 2px; /* w-[2px] */
-  background: linear-gradient(to bottom, transparent 0%, #e5e5e5 50%, transparent 99%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline-line {
-    background: linear-gradient(to bottom, transparent 0%, #404040 50%, transparent 99%);
-  }
-}
-
 /* Timeline progress */
 .timeline-progress {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  bottom: 0; /* Changed from top: 0 to bottom: 0 */
   width: 2px; /* w-[2px] */
-  background: linear-gradient(to top, #a855f7 0%, #3b82f6 10%, transparent 100%);
+  background: linear-gradient(to bottom, #a855f7 0%, #3b82f6 10%, transparent 100%); /* Changed direction */
   border-radius: 9999px; /* rounded-full */
+  transform-origin: bottom; /* Add this to ensure animations work from bottom */
+}
+
+/* Update the line gradient to look better from bottom */
+.timeline-line {
+  position: absolute;
+  left: 2rem; /* md:left-8 left-8 */
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 2px; /* w-[2px] */
+  background: linear-gradient(to top, transparent 0%, #e5e5e5 50%, transparent 99%);
+  mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .timeline-line {
+    background: linear-gradient(to top, transparent 0%, #404040 50%, transparent 99%);
+  }
 }

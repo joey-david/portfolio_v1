@@ -2,13 +2,14 @@
   --primary: #5d3cf2;
   --secondary: #3d7af5;
   --accent: #f24c3d;
-  --background: #0a0a0a;
-  --bg-secondary: #22222e;
-  --card-bg: #2c2b2e;
+  --bg-hero: #0a0a0a;
+  --background: #0f1424;
+  --bg-secondary: #0c0b11;
+  --card-bg: #transparent;
   --text-primary: #ffffff;
   --text-secondary: #a1a1a1;
   --text-ternary: #dadada;
-  --border: #2a2a2a;
+  --border: #3a3a3a;
 }
 
 * {
@@ -69,8 +70,8 @@ section h2::after {
   display: inline-block;
   padding: 0.8rem 1.8rem;
   background-color: var(--primary);
+  border: 2px solid var(--primary);
   color: white;
-  border: none;
   border-radius: 4px;
   font-weight: 600;
   text-decoration: none;
@@ -79,7 +80,9 @@ section h2::after {
 }
 
 .btn:hover {
-  background-color: var(--secondary);
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
   transform: translateY(-2px);
 }
 

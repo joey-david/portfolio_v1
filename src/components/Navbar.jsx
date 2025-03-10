@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showEasterEgg, setShowEasterEgg] = useState(false);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +26,14 @@ const Navbar = () => {
 
   const handleEasterEgg = () => {
     setShowEasterEgg(true);
+    // Play the sound when easter egg is triggered
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // Reset audio to start
+      audioRef.current.play();
+    }
     setTimeout(() => {
       setShowEasterEgg(false);
-    }, 2000); // Shows for 1 second
+    }, 1500); // Shows for 2 seconds
   };
 
   return (
@@ -69,6 +75,12 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+
+      {/* Audio element for easter egg sound */}
+      <audio ref={audioRef} className="easter-egg-sound">
+        <source src="/src/assets/meow.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
 
       <AnimatePresence>
         {showEasterEgg && (

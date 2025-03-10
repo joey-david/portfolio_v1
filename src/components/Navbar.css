@@ -32,6 +32,10 @@
     animation: pulse 2s infinite;
   }
 
+  .easter-egg-sound {
+    display: none; /* Hide the audio element */
+  }
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.3); }

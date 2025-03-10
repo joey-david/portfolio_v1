@@ -14,8 +14,10 @@ const ProjectCard = ({ project }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ y: -10 }}
+      transition={{ duration: 0.1 }}
+      whileHover={{
+        scale: 1.02,
+      }}
     >
       <div className="project-image">
         <img src={imageUrl} alt={title} />
@@ -39,7 +41,15 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
       <div className="project-info">
-        <h3 className="project-title">{title}</h3>
+        <h3 className="project-title">
+          {githubUrl ? (
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
+        </h3>
         <p className="project-date">{date}</p>
         <p className="project-description">{description}</p>
         <div className="project-tags">

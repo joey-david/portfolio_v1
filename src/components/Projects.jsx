@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: 'ChatBrain',
       description: 'Developed an application for advanced conversation analysis from multiple sources (text input, logs, screenshots, voice messages) with LLM pipeline integration.',
-      image: 'https://github.com/joey-david/chatbrain',
+      image: '/public/chatbrain.png',
       tags: ['AI', 'PyTorch', 'YOLO'],
       githubUrl: 'https://github.com/joey-david/chatbrain',
       liveUrl: 'https://chatbrain.chat',
@@ -22,7 +22,7 @@ const Projects = () => {
       id: 2,
       title: 'Agentica',
       description: 'Collection of modular LLM-powered agents for automation, learning, and research with features like spaced repetition flashcards and dynamic task execution.',
-      image: '/projects/agentica.webp',
+      image: '/public/agentica.png',
       tags: ['LLMs', 'Agents', 'Python'],
       githubUrl: 'https://github.com/joey-david/agentica',
       date: 'January 2025 - Ongoing',
@@ -30,39 +30,41 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Neural Network from Scratch',
-      description: 'Implemented a pure Numpy neural network achieving multi-class classification across 51 character classes with efficient mini-batch processing.',
-      image: '/projects/neural-network.webp',
-      tags: ['Python', 'NumPy', 'ML'],
-      githubUrl: 'https://github.com/joey-david/neural-network-scratch',
-      date: 'July 2024 - August 2024',
+      title: 'Soldering Defect Detector',
+      description: 'Finetuning and deployement of a finetuned Patchore model for detecting soldering defects in food packaging. Leveraged the Patchcore model on a very light dataset to achieve extremely high accuracy.',
+      image: '/public/soldering.png',
+      tags: ['Vision', 'Patchcore', 'Pytorch'],
+      githubUrl: 'https://github.com/joey-david/soldering-defect-detector',
+      date: 'April 2024 - July 2024',
       category: 'ml'
     },
     {
       id: 4,
-      title: 'CV Analysis Model',
-      description: 'Complete design and implementation of a CV analysis model based on natural language processing for Sopra Steria.',
-      image: '/projects/cv-analysis.webp',
-      tags: ['NLP', 'Java', 'Spring', 'React'],
-      date: 'April 2024 - July 2024',
-      category: 'llm'
+      title: 'Uveitis Diagnosis Model',
+      description: 'Semi-supervised learning model for etiological diagnosis of uveitis, a sight-threatening eye inflammation.',
+      image: '/public/uveitis.png',
+      tags: ['AI', 'Semi-supervised', 'Healthcare'],
+      date: 'February 2025 - June 2025',
+      category: 'ml'
     },
     {
       id: 5,
-      title: 'Gas Network Management App',
-      description: 'Developed various features in Java, Spring, and React, 100% of which were implemented in the Operation application used by Storengy to manage France\'s gas network.',
-      image: '/projects/gas-network.webp',
-      tags: ['Java', 'Spring', 'React'],
-      date: 'April 2024 - July 2024',
-      category: 'other'
+      title: 'Transformer tinkering',
+      description: 'Experimented with various transformer models and architectures for text generation, summarization, and translation tasks.',
+      githubUrl: 'https://github.com/joey-david/transfotinker.git',
+      image: '/public/transformer.png',
+      tags: ['NLP', 'Multi-head attention', 'Pytorch'],
+      date: 'March 2025 - Ongoing',
+      category: 'llm'
     },
     {
       id: 6,
-      title: 'Uveitis Diagnosis Model',
-      description: 'Semi-supervised learning model for etiological diagnosis of uveitis, a sight-threatening eye inflammation.',
-      image: '/projects/uveitis-diagnosis.webp',
-      tags: ['AI', 'Semi-supervised', 'Healthcare'],
-      date: 'February 2025 - June 2025',
+      title: 'Neural Network from Scratch',
+      description: 'Implemented a pure Numpy neural network achieving multi-class classification across 51 character classes with efficient mini-batch processing.',
+      image: '/public/emnist.png',
+      tags: ['Python', 'NumPy', 'ML'],
+      githubUrl: 'https://github.com/joey-david/neural-network-scratch',
+      date: 'July 2024 - August 2024',
       category: 'ml'
     }
   ];
@@ -82,8 +84,7 @@ const Projects = () => {
     <section id="projects" className="projects gradient-transition">
       <div className="container">
         <div className="section-header">
-          {/* <div className="badge">My Work</div> */}
-          <h2>Projects</h2>
+          <h2>Recent Projects</h2>
         </div>
 
         <div className="filters">

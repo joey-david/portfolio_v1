@@ -38,8 +38,8 @@ const Hero = () => {
         >
           <motion.div className="intro" variants={itemVariants}>
             <h1>Joey David</h1>
-            <h2>AI Developer & Student</h2>
-            <p>Combining academic training with practical experience in building intelligent systems.</p>
+            <h2>NLP/ML Student Researcher</h2>
+            <p>Working to build helpful intelligent systems that learn, find, and improve.</p>
           </motion.div>
 
           <motion.div className="hero-buttons" variants={itemVariants}>

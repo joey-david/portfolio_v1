@@ -83,12 +83,13 @@
   
   .image-container {
     position: relative;
+    align-self: center;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+    width: 90%;
     max-width: 400px;
-    margin: 0 0;
+    margin: auto;
   }
   
   .image-container::before {
