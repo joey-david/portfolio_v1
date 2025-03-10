@@ -17,9 +17,11 @@
     align-items: center;
     max-width: 1200px;
     width: 100%; /* Add this to take full available width */
+    margin: 3rem auto; /* Add this to center horizontally */
   }
   
   .about-text {
+    color: var(--text-primary);
     flex: 1;
   }
   
@@ -36,8 +38,11 @@
   
   .about-cta {
     display: flex;
+    flex-direction: row;
     gap: 16px;
     margin-top: 30px;
+    align-items: center;
+    justify-content: center; /* Add this line to center contents horizontally */
   }
   
   .cta-button {
@@ -49,6 +54,9 @@
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .cta-button:hover {
@@ -65,12 +73,11 @@
   
   .cta-button.secondary:hover {
     background-color: var(--primary-color);
-    color: white;
   }
   
   .about-image {
-    flex: 1;
     position: relative;
+    width: auto;
   }
   
   .image-container {
@@ -107,13 +114,11 @@
   }
   
   .experience-badge {
-    position: absolute;
-    bottom: 30px;
     right: 0;
     background-color: var(--primary-color);
     color: white;
     border-radius: 12px;
-    padding: 15px;
+    padding: 2px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,5 +170,8 @@
     .cta-button {
       width: 100%;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showEasterEgg, setShowEasterEgg] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +23,22 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleEasterEgg = () => {
+    setShowEasterEgg(true);
+    setTimeout(() => {
+      setShowEasterEgg(false);
+    }, 2000); // Shows for 1 second
+  };
+
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <nav className="nav">
           <Link to="/#" className="logo">
-            Joey <span>David</span>
+            Joey <span>Dav<span 
+              onClick={handleEasterEgg}
+              style={{ cursor: 'pointer' }}
+            >i</span>d</span>
           </Link>
           
           <div className="menu-toggle" onClick={toggleMenu}>
@@ -58,6 +69,21 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+
+      <AnimatePresence>
+        {showEasterEgg && (
+          <motion.div
+            className="easter-egg-modal"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="easter-egg-content">
+              <h1>Normiaou</h1>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

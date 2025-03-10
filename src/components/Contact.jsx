@@ -81,7 +81,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header">
-          <div className="badge">Get In Touch</div>
+          {/* <div className="badge">Get In Touch</div> */}
           <h2>Contact</h2>
         </div>
         
@@ -98,7 +98,7 @@ const Contact = () => {
                 <FaMapMarkerAlt />
               </div>
               <h3>Location</h3>
-              <p>Paris, France</p>
+              <p>Lyon, France</p>
             </motion.div>
             
             <motion.div 
@@ -126,7 +126,7 @@ const Contact = () => {
                 <FaPhone />
               </div>
               <h3>Phone</h3>
-              <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+              <p><a href="tel:+33123456789">+33 7 83 36 71 12</a></p>
             </motion.div>
           </div>
           

@@ -1,6 +1,7 @@
 .projects {
-    padding: 80px 0;
-    background-color: #f9fafb;
+    padding: 2rem;
+    background-color: var(--background);
+    margin-bottom: 6rem;
   }
   
   .projects .container {
@@ -12,11 +13,11 @@
   .section-header {
     text-align: center;
     margin-bottom: 50px;
+    color: var(--text-primary);
   }
   
   .badge {
     display: inline-block;
-    background-color: rgba(79, 70, 229, 0.1);
     color: #4f46e5;
     font-size: 14px;
     font-weight: 600;
@@ -28,7 +29,6 @@
   .section-header h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #111827;
     margin: 0;
   }
   

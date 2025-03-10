@@ -16,7 +16,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/joey-david/chatbrain.chat',
       liveUrl: 'https://chatbrain.chat',
       date: 'November 2024 - February 2025',
-      category: 'ai'
+      category: 'llm'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Projects = () => {
       tags: ['LLMs', 'Agents', 'Python'],
       githubUrl: 'https://github.com/joey-david/agentica',
       date: 'January 2025 - Ongoing',
-      category: 'ai'
+      category: 'llm'
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ const Projects = () => {
       image: '/projects/cv-analysis.webp',
       tags: ['NLP', 'Java', 'Spring', 'React'],
       date: 'April 2024 - July 2024',
-      category: 'web'
+      category: 'llm'
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const Projects = () => {
       image: '/projects/gas-network.webp',
       tags: ['Java', 'Spring', 'React'],
       date: 'April 2024 - July 2024',
-      category: 'web'
+      category: 'other'
     },
     {
       id: 6,
@@ -63,15 +63,15 @@ const Projects = () => {
       image: '/projects/uveitis-diagnosis.webp',
       tags: ['AI', 'Semi-supervised', 'Healthcare'],
       date: 'February 2025 - June 2025',
-      category: 'ai'
+      category: 'ml'
     }
   ];
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'ai', label: 'AI & ML' },
-    { id: 'web', label: 'Web Apps' },
-    { id: 'ml', label: 'Machine Learning' }
+    { id: 'llm', label: 'Large Language Models' },
+    { id: 'ml', label: 'Machine Learning' },
+    { id: 'other', label: 'Others' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -82,7 +82,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <div className="section-header">
-          <div className="badge">My Work</div>
+          {/* <div className="badge">My Work</div> */}
           <h2>Projects</h2>
         </div>
 

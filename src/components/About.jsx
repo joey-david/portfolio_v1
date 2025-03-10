@@ -4,7 +4,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about-section gradient-transition">
       <div className="container">
         <motion.div 
           className="about-content"
@@ -30,7 +30,7 @@ const About = () => {
               <p>
                 I'm Joey David, a passionate full-stack developer with a deep interest in creating 
                 elegant, efficient, and user-friendly applications. My journey in software development 
-                began over 5 years ago, and I've since honed my skills across various technologies 
+                began over 4 years ago, and I've since honed my skills across various technologies 
                 and frameworks.
               </p>
               <p>
@@ -51,7 +51,11 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <a href="#contact" className="cta-button">Get In Touch</a>
-              <a href="#projects" className="cta-button secondary">View My Work</a>
+              <a href="#projects" className="cta-button">View My Work</a>
+              <div className="experience-badge">
+                <span className="years">4+</span>
+                <span className="text">Years<br/>Experience</span>
+              </div>
             </motion.div>
           </div>
           <motion.div 
@@ -62,10 +66,6 @@ const About = () => {
           >
             <div className="image-container">
               <img src="/src/assets/profile_picture.webp" alt="Joey David" />
-            </div>
-            <div className="experience-badge">
-              <span className="years">5+</span>
-              <span className="text">Years<br/>Experience</span>
             </div>
           </motion.div>
         </motion.div>

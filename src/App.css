@@ -3,7 +3,8 @@
   --secondary: #3d7af5;
   --accent: #f24c3d;
   --background: #0a0a0a;
-  --card-bg: #121212;
+  --bg-secondary: #22222e;
+  --card-bg: #22222e;
   --text-primary: #ffffff;
   --text-secondary: #a1a1a1;
   --border: #2a2a2a;
@@ -43,8 +44,9 @@ section h2 {
 section h2::after {
   content: "";
   position: absolute;
-  bottom: -8px;
-  left: 0;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -116,6 +118,68 @@ section h2::after {
   background-color: var(--border);
   border-radius: 4px;
   color: var(--text-secondary);
+}
+
+/* Add these styles to your App.css file */
+
+/* Create a gradient transition class */
+.gradient-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top-to-bottom transition (for section transitions) */
+.gradient-transition::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--current-section-bg), transparent);
+  z-index: 1;
+}
+
+.gradient-transition::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, var(--current-section-bg), var(--next-section-bg));
+  z-index: 1;
+}
+
+/* Apply specific transitions for section pairs */
+.hero-section {
+  --current-section-bg: var(--background);
+  --next-section-bg: var(--bg-secondary);
+}
+
+.about-section {
+  --current-section-bg: var(--bg-secondary);
+  --next-section-bg: var(--background);
+}
+
+.projects {
+  --current-section-bg: var(--background);
+  --next-section-bg: var(--bg-secondary);
+}
+
+.experience-section {
+  --current-section-bg: var(--bg-secondary);
+  --next-section-bg: var(--background);
+}
+
+.skills-section {
+  --current-section-bg: var(--background);
+  --next-section-bg: var(--bg-secondary);
+}
+
+.contact {
+  --current-section-bg: var(--bg-secondary);
+  --next-section-bg: var(--background);
 }
 
 /* Responsive utilities */
