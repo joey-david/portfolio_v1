@@ -52,10 +52,10 @@ const About = () => {
             >
               <a href="#contact" className="cta-button">Get In Touch</a>
               <a href="#projects" className="cta-button">View My Work</a>
-              <div className="experience-badge">
+              {/* <div className="experience-badge">
                 <span className="years">4+</span>
                 <span className="text">Years<br/>Experience</span>
-              </div>
+              </div> */}
             </motion.div>
           </div>
           <motion.div 

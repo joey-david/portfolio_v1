@@ -68,7 +68,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="experience-section">
+    <section id="experience" className="experience-section gradient-transition">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

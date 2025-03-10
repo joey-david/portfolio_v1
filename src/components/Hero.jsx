@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">
+    <section className="hero hero-section">
       <div className="container">
         <motion.div 
           className="hero-content"
@@ -68,6 +68,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      <div className="hero-gradient-bottom"></div>
     </section>
   );
 };

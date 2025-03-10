@@ -79,7 +79,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects gradient-transition">
       <div className="container">
         <div className="section-header">
           {/* <div className="badge">My Work</div> */}

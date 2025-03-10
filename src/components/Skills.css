@@ -37,7 +37,7 @@
   }
   
   .skill-category {
-    background-color: white;
+    background-color: var(--card-bg);
     width: 35%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -48,7 +48,7 @@
   .skill-category h3 {
     margin-bottom: 1.5rem;
     font-size: 1.4rem;
-    color: #444;
+    color: var(--text-primary);
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #f0f0f0;
   }
@@ -67,7 +67,7 @@
   .skill-name {
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-ternary);
   }
   
   .skill-bar-container {
@@ -86,7 +86,7 @@
   
   .skill-percentage {
     font-size: 0.8rem;
-    color: #777;
+    color: var(--text-secondary);
     text-align: right;
   }
   

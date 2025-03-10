@@ -62,7 +62,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section gradient-transition">
       <div className="container">
         <motion.h2 
           className="section-title"

@@ -2,7 +2,7 @@ import { useMotionValueEvent, useScroll, useTransform, motion } from "framer-mot
 import React, { useEffect, useRef, useState } from "react";
 import './Timeline.css';
 
-const Timeline = ({ data }) => {
+export const Timeline = ({ data }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
@@ -30,7 +30,7 @@ const Timeline = ({ data }) => {
             <div key={index} className="timeline-item">
               <div className="timeline-marker">
                 <div className="timeline-dot">
-                  <div className="timeline-dot-inner" />
+                  <div className="timeline-dot-inner"></div>
                 </div>
                 <h3 className="timeline-year">{item.title}</h3>
               </div>
@@ -58,5 +58,3 @@ const Timeline = ({ data }) => {
     </div>
   );
 };
-
-export { Timeline };
