@@ -11,9 +11,9 @@ const Projects = () => {
       id: 1,
       title: 'ChatBrain',
       description: 'Developed an application for advanced conversation analysis from multiple sources (text input, logs, screenshots, voice messages) with LLM pipeline integration.',
-      image: '/projects/chatbrain.webp',
+      image: 'https://github.com/joey-david/chatbrain',
       tags: ['AI', 'PyTorch', 'YOLO'],
-      githubUrl: 'https://github.com/joey-david/chatbrain.chat',
+      githubUrl: 'https://github.com/joey-david/chatbrain',
       liveUrl: 'https://chatbrain.chat',
       date: 'November 2024 - February 2025',
       category: 'llm'

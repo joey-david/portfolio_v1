@@ -90,6 +90,7 @@
   }
   
   .project-description {
+    font-size: 0.9rem;
     color: #d1d1d1;
     margin-bottom: 15px;
     flex-grow: 1;
@@ -98,6 +99,7 @@
   
   .project-tags {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: auto;
