@@ -12,6 +12,28 @@ const Experience = () => {
           <h3 className="timeline-role">Senior Frontend Developer</h3>
           <p className="timeline-company">InnovateTech Solutions</p>
           <p className="timeline-period">Jan 2023 - Present</p>
+          
+          {/* Image Gallery */}
+          <div className="timeline-images">
+            <div className="timeline-image-row">
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Team collaboration" 
+                className="timeline-image-square" 
+              />
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Product dashboard" 
+                className="timeline-image-square" 
+              />
+            </div>
+            <img 
+              src="/api/placeholder/800/450" 
+              alt="Customer portal overview" 
+              className="timeline-image-rectangle" 
+            />
+          </div>
+          
           <ul className="timeline-achievements">
             <li>Led the development of a new customer portal using React and TypeScript, improving user engagement by 40%</li>
             <li>Implemented CI/CD pipelines and automated testing, reducing deployment time by 60%</li>
@@ -27,6 +49,28 @@ const Experience = () => {
           <h3 className="timeline-role">Frontend Developer</h3>
           <p className="timeline-company">WebFlow Digital</p>
           <p className="timeline-period">Mar 2021 - Dec 2022</p>
+          
+          {/* Image Gallery */}
+          <div className="timeline-images">
+            <div className="timeline-image-row">
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="UI design collaboration" 
+                className="timeline-image-square" 
+              />
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Web application interface" 
+                className="timeline-image-square" 
+              />
+            </div>
+            <img 
+              src="/api/placeholder/800/450" 
+              alt="Responsive design showcase" 
+              className="timeline-image-rectangle" 
+            />
+          </div>
+          
           <ul className="timeline-achievements">
             <li>Developed responsive web applications using React, Redux, and modern CSS frameworks</li>
             <li>Collaborated with UX/UI designers to implement pixel-perfect interfaces and animations</li>
@@ -42,6 +86,28 @@ const Experience = () => {
           <h3 className="timeline-role">Junior Web Developer</h3>
           <p className="timeline-company">CreativeLabs Studio</p>
           <p className="timeline-period">Jun 2019 - Feb 2021</p>
+          
+          {/* Image Gallery */}
+          <div className="timeline-images">
+            <div className="timeline-image-row">
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Client website mockup" 
+                className="timeline-image-square" 
+              />
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="WordPress development" 
+                className="timeline-image-square" 
+              />
+            </div>
+            <img 
+              src="/api/placeholder/800/450" 
+              alt="Mobile responsive design" 
+              className="timeline-image-rectangle" 
+            />
+          </div>
+          
           <ul className="timeline-achievements">
             <li>Built and maintained client websites using HTML, CSS, JavaScript, and WordPress</li>
             <li>Implemented responsive designs and ensured cross-browser compatibility</li>
@@ -57,6 +123,28 @@ const Experience = () => {
           <h3 className="timeline-role">Frontend Development Intern</h3>
           <p className="timeline-company">TechStart Inc.</p>
           <p className="timeline-period">Jan 2018 - May 2019</p>
+          
+          {/* Image Gallery */}
+          <div className="timeline-images">
+            <div className="timeline-image-row">
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="Learning web development" 
+                className="timeline-image-square" 
+              />
+              <img 
+                src="/api/placeholder/400/400" 
+                alt="UI prototyping" 
+                className="timeline-image-square" 
+              />
+            </div>
+            <img 
+              src="/api/placeholder/800/450" 
+              alt="Internship project showcase" 
+              className="timeline-image-rectangle" 
+            />
+          </div>
+          
           <ul className="timeline-achievements">
             <li>Assisted in developing user interfaces for web applications</li>
             <li>Gained hands-on experience with HTML, CSS, JavaScript, and jQuery</li>

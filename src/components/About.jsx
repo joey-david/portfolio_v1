@@ -65,7 +65,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="image-container">
-              <img src="/src/assets/profile_picture.webp" alt="Joey David" />
+              <img src="/src/assets/profile_picture.png" alt="Joey David" />
             </div>
           </motion.div>
         </motion.div>
