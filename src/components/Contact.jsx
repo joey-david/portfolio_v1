@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+import { MapPin, Mail, Phone } from 'lucide-react'; // Using Lucide icons for consistency
 import './Contact.css';
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -48,40 +50,55 @@ const Contact = () => {
       isSubmitted: false
     });
     
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus({
-        message: 'Thank you! Your message has been sent.',
-        isError: false,
-        isSubmitting: false,
-        isSubmitted: true
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => {
+    // Replace these with your actual EmailJS service ID, template ID, and public key
+    const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
+    const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
+    const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+    
+    // Send the email using EmailJS
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
         setFormStatus({
-          message: '',
+          message: 'Thank you! Your message has been sent.',
           isError: false,
+          isSubmitting: false,
+          isSubmitted: true
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Reset status after 3 seconds
+        setTimeout(() => {
+          setFormStatus({
+            message: '',
+            isError: false,
+            isSubmitting: false,
+            isSubmitted: false
+          });
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        setFormStatus({
+          message: 'Sorry, I haven\'t set up the email service yet. Please copy your message and e-mail me!',
+          isError: true,
           isSubmitting: false,
           isSubmitted: false
         });
-      }, 3000);
-    }, 1000);
+      });
   };
   
   return (
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header">
-          {/* <div className="badge">Get In Touch</div> */}
           <h2>Contact</h2>
         </div>
         
@@ -95,7 +112,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div className="icon">
-                <FaMapMarkerAlt />
+                <MapPin />
               </div>
               <h3>Location</h3>
               <p>Lyon, France</p>
@@ -109,7 +126,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div className="icon">
-                <FaEnvelope />
+                <Mail />
               </div>
               <h3>Email</h3>
               <p><a href="mailto:joeydavid99@gmail.com">joeydavid99@gmail.com</a></p>
@@ -123,10 +140,10 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div className="icon">
-                <FaPhone />
+                <Phone />
               </div>
               <h3>Phone</h3>
-              <p><a href="tel:+33123456789">+33 7 83 36 71 12</a></p>
+              <p><a href="tel:+33783367112">+33 7 83 36 71 12</a></p>
             </motion.div>
           </div>
           
@@ -137,7 +154,7 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
               <h3>Send a Message</h3>
               
               {formStatus.message && (

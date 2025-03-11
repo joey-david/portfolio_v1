@@ -27,22 +27,9 @@ const About = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <p>
-                I'm Joey David, a passionate full-stack developer with a deep interest in creating 
-                elegant, efficient, and user-friendly applications. My journey in software development 
-                began over 4 years ago, and I've since honed my skills across various technologies 
-                and frameworks.
-              </p>
-              <p>
-                I specialize in React, Node.js, and modern web technologies, always staying current 
-                with the latest developments in the tech world. My approach combines technical expertise 
-                with creative problem-solving to build solutions that not only work well but also provide 
-                exceptional user experiences.
-              </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing my knowledge through technical writing and mentoring.
-              </p>
+              <p> I’m Joey David, a developer and AI student with a passion for building intelligent systems that solve real-world problems. Over the past few years, I’ve gained hands-on experience in machine learning, natural language processing, and full-stack development. More recently, I've been digging deeper into AI research (especially in the medical field, given my current position). </p>
+              <p> I'm comfortable with modern AI frameworks, with a strong foundation in computer vision, neural networks, and deployment tools. I'm passionate about the intricacies of making machines reason, and grateful that the forefront of AI advancements is moving in that direction - it's something I strongly want to be a part of. </p>
+              <p> When I’m not writing code, I enjoy hiking, cycling, chess, music, and exploring new languages. Don't hesitate to reach out! </p>
             </motion.div>
             <motion.div 
               className="about-cta"

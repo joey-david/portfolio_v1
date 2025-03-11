@@ -31,10 +31,6 @@
     color: var(--text-primary);
   }
 
-  .project-card a:hover {
-    color: var(--secondary);
-  }
-  
   .project-overlay {
     position: absolute;
     top: 0;
@@ -59,7 +55,7 @@
   }
   
   .project-link {
-    background-color: #ffffff;
+    background-color: var(--secondary);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -67,11 +63,10 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
-    color: #333;
   }
   
   .project-link:hover {
-    transform: translateY(-5px);
+    transform: scale(1.1);
   }
   
   .project-info {
@@ -111,8 +106,8 @@
   }
   
   .project-tag {
-    background-color: #f0f0f0;
-    color: #555;
+    background-color: #2a3a6d;
+    color: var(--text-primary);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;

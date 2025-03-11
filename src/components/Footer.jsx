@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">
             <h3>Joey David</h3>
-            <p>AI Engineer & Machine Learning Specialist</p>
+            <p>AI & Machine Learning Student Researcher</p>
           </div>
           
           <div className="footer-links">
