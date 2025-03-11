@@ -22,24 +22,35 @@
     align-items: center;
     z-index: 2000;
   }
-
   .easter-egg-content {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
-    border-radius: 10px;
     text-align: center;
     color: white;
-    animation: pulse 2s infinite;
+    animation: funkyTextCross 2s infinite linear;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    position: absolute;
+  }
+
+  .easter-egg-content:hover {
+    animation-duration: 2s;
   }
 
   .easter-egg-sound {
     display: none; /* Hide the audio element */
   }
 
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1.0); }
+  @keyframes funkyTextCross {
+    0% { 
+      transform: translate(-100%, -100%) scale(1) rotate(-3deg) skew(5deg);
+      left: 0;
+      top: 0;
+    }
+    100% { 
+      transform: translate(100%, 100%) scale(1) rotate(3deg) skew(-5deg);
+      left: 100%;
+      top: 100%;
+    }
   }
   
   .navbar.scrolled {

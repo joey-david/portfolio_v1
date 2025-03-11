@@ -1,156 +1,128 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Timeline } from './Timeline';
+import { 
+  CardLayoutSquareRight,
+  CardLayoutDualUnder,
+  CardLayoutBannerTop,
+  CardLayoutSquareLeftRectangleRight,
+  CardLayoutCircleLeft
+} from './CardsLayouts';
 import './Experience.css';
+import { FaZ } from 'react-icons/fa6';
 
 const Experience = () => {
   const experienceData = [
     {
+      title: '2025',
+      // Use an array of content elements instead of a single element
+      content: [
+        <CardLayoutCircleLeft
+          key="insa"
+          title="Student Researcher - Machine Learning"
+          subtitle="INSA Lyon"
+          period="March 2025 - June 2025"
+          image="timeline/insa.png"
+          description={
+            <>
+              <p>Developing a semi-supervised learning model for etiological diagnosis of uveitis, a sight-threatening eye inflammation.</p>
+            </>
+          }
+        />
+      ]
+    },
+    {
+      title: '2024',
+      content: [
+        <CardLayoutBannerTop
+          key="master"
+          title="M.Sc. - Artificial Intelligence"
+          subtitle="Université Claude Bernard, Lyon"
+          period="September 2024 - June 2026"
+          image="/timeline/ucbl.png"
+          description={
+            <>              
+              <p>Coming back from the US, I decided to pursue a Masters of Science in AI (M2 IA) at the Université Claude Bernard in Lyon.</p>
+            </>
+          }
+        />,
+        <CardLayoutSquareLeftRectangleRight
+          key="sopra"
+          title="Fullstack Developer - Intern"
+          subtitle="Sopra Steria"
+          period="April 2024 - July 2024"
+          images={["/timeline/storengy.png", "/timeline/sopra.png"]}
+          description={
+            <>
+              <p>Joined a team on fullstack development in Java, Spring, and React of various features, 100% of which were implemented in the Operation
+application, used by Storengy to manage France’s gas network. I was also charged with designing and implementing a proof of concept for a CV analysis model based on natural language processing. </p>
+            </>
+          }
+        />
+      ]
+    },
+    {
       title: '2023',
-      content: (
-        <div className="timeline-card">
-          <h3 className="timeline-role">Senior Frontend Developer</h3>
-          <p className="timeline-company">InnovateTech Solutions</p>
-          <p className="timeline-period">Jan 2023 - Present</p>
-          
-          {/* Image Gallery */}
-          <div className="timeline-images">
-            <div className="timeline-image-row">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Team collaboration" 
-                className="timeline-image-square" 
-              />
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Product dashboard" 
-                className="timeline-image-square" 
-              />
-            </div>
-            <img 
-              src="/api/placeholder/800/450" 
-              alt="Customer portal overview" 
-              className="timeline-image-rectangle" 
-            />
-          </div>
-          
-          <ul className="timeline-achievements">
-            <li>Led the development of a new customer portal using React and TypeScript, improving user engagement by 40%</li>
-            <li>Implemented CI/CD pipelines and automated testing, reducing deployment time by 60%</li>
-            <li>Mentored junior developers and conducted code reviews to ensure code quality and best practices</li>
-          </ul>
-        </div>
-      ),
+      content: [
+        <CardLayoutSquareRight
+          key="osu"
+          title="Mobility Grant - Year Abroad"
+          subtitle="Oregon State University"
+          period="September 2023 - April 2024"
+          image="/timeline/osu.png"
+          description={
+            <>
+              <p>After having been selected for a mobility grant by the UCBL, I completed my B.Sc. in CS at Oregon State University, in Corvallis.</p>
+              <p>On top of making great friends there, I deepened my passion for Artificial Intelligence.</p>
+            </>
+          }
+        />,
+        <CardLayoutCircleLeft
+          key="hno"
+          title="Information Systems Technician"
+          subtitle="Hôpitaux Nord Ouest"
+          period="June 2023 - August 2023"
+          image="/timeline/hno.png"
+          description={
+            <>
+              <p>Actively maintained and improved IT systems for 10+ hospitals and care centers, resolving over 600 ticketed issues. Worked with healthcare professionals to ensure critical systems remained operational.</p>
+            </>
+          }
+        />
+      ],
     },
     {
-      title: '2021',
+      title: '2022',
       content: (
-        <div className="timeline-card">
-          <h3 className="timeline-role">Frontend Developer</h3>
-          <p className="timeline-company">WebFlow Digital</p>
-          <p className="timeline-period">Mar 2021 - Dec 2022</p>
-          
-          {/* Image Gallery */}
-          <div className="timeline-images">
-            <div className="timeline-image-row">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="UI design collaboration" 
-                className="timeline-image-square" 
-              />
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Web application interface" 
-                className="timeline-image-square" 
-              />
-            </div>
-            <img 
-              src="/api/placeholder/800/450" 
-              alt="Responsive design showcase" 
-              className="timeline-image-rectangle" 
-            />
-          </div>
-          
-          <ul className="timeline-achievements">
-            <li>Developed responsive web applications using React, Redux, and modern CSS frameworks</li>
-            <li>Collaborated with UX/UI designers to implement pixel-perfect interfaces and animations</li>
-            <li>Optimized application performance, achieving a 30% improvement in load times</li>
-          </ul>
-        </div>
-      ),
+        <CardLayoutBannerTop
+          key="bsc"
+          title="Second year B.Sc. - Computer Science"
+          subtitle="Université Claude Bernard Lyon"
+          period="September 2022 - June 2024"
+          image="/timeline/ucbl.png"
+          description={
+            <>
+              <p>After finishing my CPGE courses and getting admission offers from some French engineering schools, I instead opted to leverage my formation in computer science to switch to a B.Sc. in the domain.</p>
+            </>
+          }
+        />
+      )
     },
     {
-      title: '2019',
+      title: '2020',
       content: (
-        <div className="timeline-card">
-          <h3 className="timeline-role">Junior Web Developer</h3>
-          <p className="timeline-company">CreativeLabs Studio</p>
-          <p className="timeline-period">Jun 2019 - Feb 2021</p>
-          
-          {/* Image Gallery */}
-          <div className="timeline-images">
-            <div className="timeline-image-row">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Client website mockup" 
-                className="timeline-image-square" 
-              />
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="WordPress development" 
-                className="timeline-image-square" 
-              />
-            </div>
-            <img 
-              src="/api/placeholder/800/450" 
-              alt="Mobile responsive design" 
-              className="timeline-image-rectangle" 
+            <CardLayoutSquareRight
+              key="licence"
+              title="CPGE - Mathematics, Physics and Computer Science"
+              subtitle="La Martinière Monplaisir, Lyon"
+              period="September 2020 - May 2022"
+              image="/timeline/monplaisir.png"
+              description={
+                <>
+                  <p>Followed an intense formation in Mathematics, Physics, Engineering and Computer Science, in preparation for "les concours" to access engineering schools.</p>
+                </>
+              }
             />
-          </div>
-          
-          <ul className="timeline-achievements">
-            <li>Built and maintained client websites using HTML, CSS, JavaScript, and WordPress</li>
-            <li>Implemented responsive designs and ensured cross-browser compatibility</li>
-            <li>Participated in agile development processes and collaborated with cross-functional teams</li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      title: '2018',
-      content: (
-        <div className="timeline-card">
-          <h3 className="timeline-role">Frontend Development Intern</h3>
-          <p className="timeline-company">TechStart Inc.</p>
-          <p className="timeline-period">Jan 2018 - May 2019</p>
-          
-          {/* Image Gallery */}
-          <div className="timeline-images">
-            <div className="timeline-image-row">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Learning web development" 
-                className="timeline-image-square" 
-              />
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="UI prototyping" 
-                className="timeline-image-square" 
-              />
-            </div>
-            <img 
-              src="/api/placeholder/800/450" 
-              alt="Internship project showcase" 
-              className="timeline-image-rectangle" 
-            />
-          </div>
-          
-          <ul className="timeline-achievements">
-            <li>Assisted in developing user interfaces for web applications</li>
-            <li>Gained hands-on experience with HTML, CSS, JavaScript, and jQuery</li>
-            <li>Collaborated with senior developers on various client projects</li>
-          </ul>
-        </div>
       ),
     },
   ];
@@ -166,7 +138,7 @@ const Experience = () => {
         >
           <h2 className="section-title">Professional Journey</h2>
           <p className="section-subtitle">
-            My professional path and key milestones that have shaped my career in web development.
+            My path and milestones in AI development and research.
           </p>
         </motion.div>
         

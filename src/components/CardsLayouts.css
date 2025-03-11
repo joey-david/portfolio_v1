@@ -1,0 +1,214 @@
+/* Base card styles */
+.timeline-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Card content styles */
+  .timeline-role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary, #111827);
+  }
+  
+  .timeline-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary, #4b5563);
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-period {
+    font-size: 0.875rem;
+    color: var(--text-tertiary, #6b7280);
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--text-secondary, #4b5563);
+    width: 100%;
+}
+  
+  /* Card layout: Square Right */
+  .card-square-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-square-right-content {
+    width: 80%;
+  }
+  
+  .card-square-right-image {
+    width: 10rem;
+    margin-top: 1rem;
+  }
+  
+  /* Card layout: Dual Under */
+  .card-dual-under-image-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .card-dual-under-image-container {
+    width: calc(50% - 0.5rem);
+  }
+  
+  /* Card layout: Banner Top */
+  .card-banner-top-image {
+    margin-bottom: 1rem;
+  }
+  
+  .card-banner-top-image img {
+    height: 150px;
+    object-position: center;
+  }
+  
+  /* Card layout: Square Left Rectangle Right */
+  .card-square-left-rect-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .card-square-left-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .card-rect-right-container {
+    width: 100%;
+  }
+  
+  .card-rect-right-container img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Card layout: Circle Left */
+  .card-circle-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-circle-image-container {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .card-circle-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  }
+  
+  .card-circle-content {
+    text-align: center;
+  }
+  
+  /* Common image styles */
+  .timeline-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  
+  .timeline-image-rectangle {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-image-square {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-image-container:hover .timeline-image-rectangle,
+  .timeline-image-container:hover .timeline-image-square {
+    transform: scale(1.03);
+  }
+  
+  /* Utility classes */
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    /* Card layout: Square Right */
+    .card-square-right {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    
+    .card-square-right-content {
+      width: 70%;
+    }
+    
+    .card-square-right-image {
+      width: 30%;
+      margin-top: 0;
+    }
+    
+    /* Card layout: Square Left Rectangle Right */
+    .card-square-left-rect-right {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    
+    .card-square-left-container {
+        height: 15rem;
+        width: 35%;
+        margin-bottom: 0;
+        display: flex;
+    }
+    
+    .card-rect-right-container {
+      height: 15rem;
+      display: flex;
+    }
+    
+    .card-square-left-container img,
+    .card-rect-right-container img {
+      object-fit: cover;
+    }
+    
+    /* Card layout: Circle Left */
+    .card-circle-left {
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    
+    .card-circle-image-container {
+      margin-bottom: 0;
+    }
+    
+    .card-circle-content {
+      text-align: left;
+    }
+  }
