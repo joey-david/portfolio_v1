@@ -18,6 +18,14 @@
   }
 }
 
+@media (max-width: 767px) {
+  .timeline-container {
+    width: 100%;
+    font-family: sans-serif;
+    padding: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .timeline-header {
     padding: 5rem 2.5rem; /* lg:px-10 */
@@ -134,7 +142,7 @@ p {
   left: 0.75rem; /* left-3 */
   width: 2.5rem; /* w-10 */
   border-radius: 9999px; /* rounded-full */
-  background-color: white;
+  background-color: var(--bg-secondary, #ffffff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +184,7 @@ p {
 .timeline-item-content {
   align-self: center;
   padding-left: 5rem; /* pl-20 */
-  padding-right: 1rem; /* pr-4 */
+  padding-right: 0rem; /* pr-4 */
   width: 100%;
 }
 

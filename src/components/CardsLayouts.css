@@ -156,6 +156,14 @@
   .mt-4 {
     margin-top: 1rem;
   }
+
+  .card-square-right-content {
+    width: 100%;
+  }
+  
+  .card-square-right-image {
+    width: 90%;
+  }
   
   /* Media queries */
   @media (min-width: 768px) {

@@ -31,7 +31,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'Soldering Defect Detector',
-      description: 'Finetuning and deployement of a finetuned Patchore model for detecting soldering defects in food packaging. Leveraged the Patchcore model on a very light dataset to achieve extremely high accuracy.',
+      description: 'Finetuning and deployement of a finetuned Patchcore model for detecting soldering defects in food packaging. Leveraged the Patchcore model on a very light dataset to achieve extremely high accuracy.',
       image: '/projects/soldering.png',
       tags: ['Vision', 'Patchcore', 'Pytorch'],
       githubUrl: 'https://github.com/joey-david/soldering-defect-detector',

@@ -78,10 +78,9 @@ const Navbar = () => {
 
       {/* Audio element for easter egg sound */}
       <audio ref={audioRef} className="easter-egg-sound">
-        <source src="/src/assets/meow.mp3" type="audio/mpeg" />
+        <source src="/meow.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-
       <AnimatePresence>
         {showEasterEgg && (
           <motion.div

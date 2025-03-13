@@ -14,7 +14,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("src/assets/jiji.gif");
+    background-image: url("/jiji.gif");
     background-size: contain;
     background-position: center;
     display: flex;
